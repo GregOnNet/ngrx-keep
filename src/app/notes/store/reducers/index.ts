@@ -5,9 +5,9 @@ import {
   createSelector
 } from '@ngrx/store';
 
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import * as fromNotes from './notes.reducer';
-import { getRouterState } from '../../store';
+import { getRouterState } from '../../../store';
 
 export interface State {
   note: any;

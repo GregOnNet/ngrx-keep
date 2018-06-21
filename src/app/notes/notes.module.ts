@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 
-import * as fromNotes from './reducers';
+import * as fromNotes from './store';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NotesComponent } from './notes.component';
 

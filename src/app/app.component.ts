@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'nt-root',
+  template: `
+    <h1 class="mat-h1">NGRX-KEEP</h1>
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-  title = 'app';
-}
+export class AppComponent {}

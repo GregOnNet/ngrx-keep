@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import * as fromNotes from '../reducers';
+import * as fromNotes from '../store';
 
 @Component({
   selector: 'nt-welcome',
