@@ -40,9 +40,8 @@ export function reducer(state = initialState, action: NotesActions): State {
 export function createReducer<TState>(
   handlers: ActionHandlers<TState>
 ): (state: TState, action: ActionWithPayload) => TState {
-  return (state: TState, action: ActionWithPayload) => {
-    return !!handlers[action.type]
+  return (state: TState, action: ActionWithPayload) =>
+    !!handlers[action.type]
       ? handlers[action.type](action.payload, state)
       : state;
-  };
 }
