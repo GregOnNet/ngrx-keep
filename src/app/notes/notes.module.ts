@@ -5,6 +5,7 @@ import { StoreModule } from '@ngrx/store';
 
 import * as fromNotes from './reducers';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { NotesComponent } from './notes.component';
 
 @NgModule({
   imports: [
@@ -12,17 +13,19 @@ import { WelcomeComponent } from './welcome/welcome.component';
     RouterModule.forChild([
       {
         path: '',
-        redirectTo: 'welcome',
-      },
-      {
-        path: 'welcome/:id',
-        component: WelcomeComponent
+        component: NotesComponent,
+        children: [
+          {
+            path: 'welcome/:id',
+            component: WelcomeComponent
+          }
+        ]
       }
     ]),
     StoreModule.forFeature('notes', fromNotes.reducers, {
       metaReducers: fromNotes.metaReducers
     })
   ],
-  declarations: [WelcomeComponent]
+  declarations: [WelcomeComponent, NotesComponent]
 })
 export class NotesModule {}
