@@ -1,0 +1,29 @@
+[
+  {
+    "guid": "a2748718-a79c-43c5-b8d2-6b4be6v65968",
+    "title": "Go run",
+    "text": "No excuses Greg!",
+    "category": {
+      "name": "Sports",
+      "color": "#FF0000"
+    }
+  },
+  {
+    "guid": "a2748718-a79c-43c5-b8d2-6a4be6e65968",
+    "title": "Tidy up your room",
+    "text": "It's time. :)",
+    "category": {
+      "name": "Home",
+      "color": "#00FF00"
+    }
+  },
+  {
+    "guid": "a2748718-a79c-43c5-b8d2-6b4be7e65968",
+    "title": "Other",
+    "text": "Time to get some serious stuff done. :)",
+    "category": {
+      "name": "Holyday",
+      "color": "#0000FF"
+    }
+  }
+]

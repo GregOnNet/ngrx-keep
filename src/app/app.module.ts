@@ -1,8 +1,9 @@
-
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { EffectsModule } from '@ngrx/effects';
 import {
   RouterStateSerializer,
   StoreRouterConnectingModule
@@ -18,7 +19,9 @@ import { CustomSerializer } from './store/router/custom-serializer';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([]),
     StoreRouterConnectingModule,
     RouterModule.forRoot([
       {

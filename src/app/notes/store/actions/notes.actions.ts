@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-import { Note } from '../models/note';
+import { Note } from '../../models/note';
 
 export enum NotesActionTypes {
   LoadAllNotes = '[Notes] Load Notes',
