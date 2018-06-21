@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngrx-additions": [
+        "dist/ngrx-additions"
+      ],
+      "ngrx-additions/*": [
+        "dist/ngrx-additions/*"
+      ]
+    }
   }
 }
