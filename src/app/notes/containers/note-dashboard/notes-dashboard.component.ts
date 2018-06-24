@@ -19,8 +19,7 @@ import * as fromNotes from '../../store';
         DETAILS
       </a>
     </nt-note-card>
-  `,
-  styleUrls: ['./notes-dashboard.component.scss']
+  `
 })
 export class NotesDashboardComponent {
   notes$: Observable<Note[]>;
