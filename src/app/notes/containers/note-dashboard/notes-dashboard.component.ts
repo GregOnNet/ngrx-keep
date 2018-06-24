@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { NotesEntityService } from '../../../notes/store/data/notes-entity.service';
+import { NotesBoard } from '../../../notes/store/data/notes-board.service';
 import { Note } from '../../models/note';
 import * as fromNotes from '../../store';
 
@@ -27,7 +27,7 @@ export class NotesDashboardComponent {
 
   constructor(
     private store: Store<fromNotes.State>,
-    private notes: NotesEntityService
+    private notes: NotesBoard
   ) {
     this.notes$ = this.notes.entities$;
   }

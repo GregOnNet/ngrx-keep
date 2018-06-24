@@ -5,10 +5,9 @@ import {
 } from 'ngrx-data';
 
 import { Note } from '../../models/note';
-import { NotesModule } from '../../notes.module';
 
 @Injectable()
-export class NotesEntityService extends EntityCollectionServiceBase<Note> {
+export class NotesBoard extends EntityCollectionServiceBase<Note> {
   constructor(entityServiceFactory: EntityCollectionServiceFactory) {
     super('Note', entityServiceFactory);
   }

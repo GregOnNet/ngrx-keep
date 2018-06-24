@@ -16,7 +16,7 @@ import { NotesRoutingModule } from './notes-routing.module';
 import { NotesComponent } from './notes.component';
 import * as fromNotes from './store';
 import { NotesDataService } from './store/data/notes-data.service';
-import { NotesEntityService } from './store/data/notes-entity.service';
+import { NotesBoard } from './store/data/notes-board.service';
 import { NotesEffects } from './store/effects/notes.effects';
 
 @NgModule({
@@ -56,7 +56,7 @@ import { NotesEffects } from './store/effects/notes.effects';
       useClass: JsonUrlGenerator
     },
     NotesDataService,
-    NotesEntityService
+    NotesBoard
   ]
 })
 export class NotesModule {
