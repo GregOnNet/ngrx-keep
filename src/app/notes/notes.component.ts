@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
 
-import * as fromRoot from '../store';
-import * as fromNotes from './store';
-import { NotesEntityService } from '../store/entities/notes-entity.service';
+import { NotesEntityService } from '../notes/store/data/notes-entity.service';
 
 @Component({
   selector: 'nt-notes',
   template: `<router-outlet></router-outlet>`
 })
 export class NotesComponent {
-  constructor(
-    private store: Store<fromRoot.State>,
-    private notes: NotesEntityService
-  ) {
+  constructor(private notes: NotesEntityService) {
     this.notes.getAll();
   }
 }

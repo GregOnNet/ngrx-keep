@@ -2,11 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DefaultDataService, HttpUrlGenerator } from 'ngrx-data';
 
-import { Note } from '../../notes/models/note';
+import { NotesModule } from '../../notes.module';
+import { Note } from '../../models/note';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class NotesDataService extends DefaultDataService<Note> {
   constructor(
     http: HttpClient,

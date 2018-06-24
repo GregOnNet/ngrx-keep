@@ -4,9 +4,10 @@ import {
   EntityCollectionServiceFactory
 } from 'ngrx-data';
 
-import { Note } from '../../notes/models/note';
+import { Note } from '../../models/note';
+import { NotesModule } from '../../notes.module';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class NotesEntityService extends EntityCollectionServiceBase<Note> {
   constructor(entityServiceFactory: EntityCollectionServiceFactory) {
     super('Note', entityServiceFactory);

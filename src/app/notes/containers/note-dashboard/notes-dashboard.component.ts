@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { NotesEntityService } from '../../../store/entities/notes-entity.service';
+import { NotesEntityService } from '../../../notes/store/data/notes-entity.service';
 import { Note } from '../../models/note';
 import * as fromNotes from '../../store';
 
