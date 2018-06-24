@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { reducers } from './store';
+import { EntitiesModule } from './store/entities/entities.module';
 import { CustomSerializer } from './store/router/custom-serializer';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CustomSerializer } from './store/router/custom-serializer';
         path: 'notes',
         loadChildren: './notes/notes.module#NotesModule'
       }
-    ])
+    ]),
+    EntitiesModule
   ],
   providers: [
     {
