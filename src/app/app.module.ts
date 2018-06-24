@@ -9,6 +9,7 @@ import {
   StoreRouterConnectingModule
 } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 import { reducers } from './store';
@@ -22,6 +23,7 @@ import { CustomSerializer } from './store/router/custom-serializer';
     BrowserAnimationsModule,
     HttpClientModule,
     StoreModule.forRoot(reducers),
+    // StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule,
     RouterModule.forRoot([
