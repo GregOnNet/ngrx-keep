@@ -15,7 +15,7 @@ import { JsonUrlGenerator } from './lib/json-url.generator';
 import { NotesRoutingModule } from './notes-routing.module';
 import { NotesComponent } from './notes.component';
 import * as fromNotes from './store';
-import { NotesDataService } from './store/data/notes-data.service';
+import { NotesBoardSetup } from './store/data/notes-board.setup';
 import { NotesBoard } from './store/data/notes-board.service';
 import { NotesEffects } from './store/effects/notes.effects';
 
@@ -55,14 +55,14 @@ import { NotesEffects } from './store/effects/notes.effects';
       provide: HttpUrlGenerator,
       useClass: JsonUrlGenerator
     },
-    NotesDataService,
+    NotesBoardSetup,
     NotesBoard
   ]
 })
 export class NotesModule {
   constructor(
     entityDataService: EntityDataService,
-    noteDataService: NotesDataService
+    noteDataService: NotesBoardSetup
   ) {
     entityDataService.registerService('Note', noteDataService);
   }
