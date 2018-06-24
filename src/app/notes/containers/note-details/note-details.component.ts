@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { select, State } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { NotesEntityService } from '../../../store/entities/notes-entity.service';
+import * as fromEntities from '../../../store/entities/notes.selectors';
 import { Note } from '../../models/note';
 import * as fromNotes from '../../store';
 
@@ -21,9 +21,7 @@ import * as fromNotes from '../../store';
 export class NoteDetailsComponent {
   note$: Observable<Note>;
 
-  constructor(
-    private store: State<fromNotes.State>
-  ) {
-    this.note$ = this.store.pipe(select(fromNotes.currentDetails));
+  constructor(private store: State<fromNotes.State>) {
+    this.note$ = this.store.pipe(select(fromEntities.getById));
   }
 }
