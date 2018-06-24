@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { select, State } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
+import { NotesEntityService } from '../../../store/entities/notes-entity.service';
 import { Note } from '../../models/note';
 import * as fromNotes from '../../store';
 
@@ -21,7 +21,9 @@ import * as fromNotes from '../../store';
 export class NoteDetailsComponent {
   note$: Observable<Note>;
 
-  constructor(private store: State<fromNotes.State>) {
+  constructor(
+    private store: State<fromNotes.State>
+  ) {
     this.note$ = this.store.pipe(select(fromNotes.currentDetails));
   }
 }

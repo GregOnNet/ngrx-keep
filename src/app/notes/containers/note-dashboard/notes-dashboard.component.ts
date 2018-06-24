@@ -29,11 +29,7 @@ export class NotesDashboardComponent {
     private store: Store<fromNotes.State>,
     private notes: NotesEntityService
   ) {
-    this.notes$ = this.store.pipe(select(fromNotes.all));
-
-    this.notes.getAll();
-    this.notes.entities$.subscribe(console.log);
-    this.store.subscribe(console.log);
+    this.notes$ = this.notes.entities$;
   }
 
   dispatchNewNote(note: Note) {
