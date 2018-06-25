@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
   DefaultHttpUrlGenerator,
-  EntityHttpResourceUrls,
   HttpResourceUrls,
   normalizeRoot,
   Pluralizer
@@ -9,18 +8,11 @@ import {
 
 @Injectable()
 export class JsonUrlGenerator extends DefaultHttpUrlGenerator {
-  private pluralizer2: Pluralizer;
-  /**
-   * Known single-entity and collection resource URLs for HTTP calls.
-   * Generator methods returns these resource URLs for a given entity type name.
-   * If the resources for an entity type name are not know, it generates
-   * and caches a resource name for future use
-   */
-  protected knownHttpResourceUrls: EntityHttpResourceUrls = {};
+  private pl: Pluralizer;
 
   constructor(pluralizer: Pluralizer) {
     super(pluralizer);
-    this.pluralizer2 = pluralizer;
+    this.pl = pluralizer;
   }
 
   /**
@@ -37,7 +29,7 @@ export class JsonUrlGenerator extends DefaultHttpUrlGenerator {
       const nRoot = normalizeRoot(root);
       resourceUrls = {
         entityResourceUrl: `${nRoot}/${entityName}.json`.toLowerCase(),
-        collectionResourceUrl: `${nRoot}/${this.pluralizer2.pluralize(
+        collectionResourceUrl: `${nRoot}/${this.pl.pluralize(
           entityName
         )}.json`.toLowerCase()
       };

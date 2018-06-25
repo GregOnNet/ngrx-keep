@@ -2,7 +2,6 @@ import { Params } from '@angular/router';
 
 import * as fromRouter from '@ngrx/router-store';
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
-import { EntityMetadataMap } from 'ngrx-data';
 
 export interface RouterStateUrl {
   url: string;

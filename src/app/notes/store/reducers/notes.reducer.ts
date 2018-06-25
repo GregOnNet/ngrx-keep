@@ -3,7 +3,6 @@ import { createReducer, ActionHandlers } from 'ngrx-additions';
 
 import { Note } from '../../models/note';
 import { NotesActions, NotesActionTypes } from '../actions/notes.actions';
-import { EntitySelectors } from '@ngrx/entity/src/models';
 
 export interface State extends EntityState<Note> {}
 
