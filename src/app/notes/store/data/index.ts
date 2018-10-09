@@ -3,6 +3,7 @@ import { createSelector } from '@ngrx/store';
 import { EntityMetadataMap } from 'ngrx-data';
 
 import * as fromRoot from '../../../store';
+import * as fromNotes from '../reducers';
 import { Note } from '../../models/note';
 
 export const entityMetadata: EntityMetadataMap = {
@@ -25,7 +26,8 @@ export const getNotes = createSelector(
 );
 
 export const getById = createSelector(
-  getNotes,
+  // getNotes,
+  fromNotes.entities,
   fromRoot.getRouterState,
-  (notes, router) => notes.entities[router.state.params.guid]
+  (notes, router) => notes[router.state.params.guid]
 );

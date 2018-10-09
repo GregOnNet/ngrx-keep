@@ -22,7 +22,7 @@ import { CustomSerializer } from './store/router/custom-serializer';
     BrowserAnimationsModule,
     HttpClientModule,
     StoreModule.forRoot(reducers),
-    // StoreDevtoolsModule.instrument(),
+    StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule,
     AppRoutingModule
