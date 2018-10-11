@@ -26,8 +26,9 @@ export const getNotes = createSelector(
 );
 
 export const getById = createSelector(
-  // getNotes,
-  fromNotes.entities,
+  getNotes,
+  // fromNotes.entities,
   fromRoot.getRouterState,
-  (notes, router) => notes[router.state.params.guid]
+  // (notes, router) => notes[router.state.params.guid]
+  (notes, router) => notes.entities[router.state.params.guid]
 );

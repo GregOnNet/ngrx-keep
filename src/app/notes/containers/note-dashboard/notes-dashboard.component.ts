@@ -28,12 +28,12 @@ export class NotesDashboardComponent {
     private store: Store<fromNotes.State>,
     private notes: NotesBoard
   ) {
-    this.notes$ = this.store.pipe(select(fromNotes.all));
-    // this.notes$ = this.notes.entities$;
+    // this.notes$ = this.store.pipe(select(fromNotes.all));
+    this.notes$ = this.notes.entities$;
   }
 
   dispatchNewNote(note: Note) {
-    this.store.dispatch(new fromNotes.CreateNote(note));
-    // this.notes.addOneToCache(note);
+    // this.store.dispatch(new fromNotes.CreateNote(note));
+    this.notes.addOneToCache(note);
   }
 }

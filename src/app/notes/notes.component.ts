@@ -15,7 +15,7 @@ export class NotesComponent {
     private store: Store<fromNotes.State>,
     private notes: NotesBoard
   ) {
-    this.store.dispatch(new LoadAllNotes());
-    // this.notes.getAll();
+    // this.store.dispatch(new LoadAllNotes());
+    this.notes.getAll();
   }
 }
